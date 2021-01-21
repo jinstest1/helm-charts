@@ -21,6 +21,7 @@ data:
       enable_tcp_queue_length: {{ $.Values.datadog.systemProbe.enableTCPQueueLength }}
       enable_oom_kill: {{ $.Values.datadog.systemProbe.enableOOMKill }}
       collect_dns_stats: {{ $.Values.datadog.systemProbe.collectDNSStats }}
+      enable_runtime_compiler: {{ $.Values.datadog.systemProbe.enableRuntimeCompiler }}
     {{- if $.Values.datadog.networkMonitoring.enabled }}
     network_config:
       enabled: true

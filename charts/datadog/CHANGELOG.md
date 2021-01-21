@@ -1,5 +1,9 @@
 # Datadog changelog
 
+## 2.6.13
+
+* Adds `systemProbe.enableRuntimeCompiler` and `systemprobe.runtimeCompilerOutputDir` to configure eBPF runtime compiler in the system-probe.
+
 ## 2.6.12
 
 * Mount `/etc/passwd` as `readOnly` in the `process-agent`.

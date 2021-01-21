@@ -282,6 +282,12 @@ datadog:
     # datadog.systemProbe.collectDNSStats -- Enable DNS stat collection
     collectDNSStats: false
 
+    # datadog.systemProbe.enableRuntimeCompiler - Enable the runtime compiler for eBPF probes
+    enableRuntimeCompiler: false
+
+    # datadog.systemProbe.runtimeCompilerOutputDir - Specify an output directory for the compiled assets from the eBPF runtime compiler
+    runtimeCompilerOutputDir: /var/tmp/datadog-agent/system-probe/build
+
   orchestratorExplorer:
     # datadog.orchestratorExplorer.enabled -- Set this to true to enable the orchestrator explorer
     ## This requires processAgent.enabled and clusterAgent.enabled to be set to true
