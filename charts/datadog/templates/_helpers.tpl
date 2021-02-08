@@ -219,3 +219,14 @@ true
 false
 {{- end -}}
 {{- end -}}
+
+{{/*
+Return true if we need to define custom prometheus check configurations.
+*/}}
+{{- define "should-add-additional-prometheus-configs" -}}
+{{- if and .Values.datadog.prometheusScrape.enabled .Values.datadog.prometheusScrape.additionalConfigs -}}
+true
+{{- else -}}
+false
+{{- end -}}
+{{- end -}}

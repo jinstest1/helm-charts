@@ -135,7 +135,7 @@ spec:
         configMap:
           name: {{ template "datadog.fullname" . }}-checksd
       {{- end }}
-      {{- if .Values.agents.useConfigMap }}
+      {{- if or (.Values.agents.useConfigMap) (eq (include "should-add-additional-prometheus-configs" .) "true") }}
       - name: {{ template "datadog.fullname" . }}-datadog-yaml
         configMap:
           name: {{ template "datadog.fullname" . }}-datadog-yaml
